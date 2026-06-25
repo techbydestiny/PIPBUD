@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageCircle, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, MessageCircle, Sparkles, Zap, Activity, Users, Heart } from 'lucide-react';
 
 export default function HeroSection() {
   return (

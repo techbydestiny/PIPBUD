@@ -3,13 +3,19 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import {
-  ArrowRight, Bot, BarChart3, Brain, MessageCircle,
-  Shield, Zap, Star, CheckCircle2, ChevronRight,
-  TrendingUp, Eye, Target, Clock, Sparkles,
-  Menu, X, Send, Users, LineChart, Activity,
-  DollarSign, Heart, Trophy, Rocket
-} from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import ProblemSection from '@/components/ProblemSection';
+import SolutionSection from '@/components/SolutionSection';
+import FeaturesGrid from '@/components/FeaturesGrid';
+import HowItWorks from '@/components/HowItWorks';
+import AICoachSection from '@/components/AICoachSection';
+import AnalyticsSection from '@/components/AnalyticsSection';
+import PricingSection from '@/components/PricingSection';
+import FAQSection from '@/components/FAQSection';
+import CTASection from '@/components/CTASection';
+import Footer from '@/components/Footer';
+
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -22,14 +28,12 @@ export default function Home() {
     <main ref={containerRef} className="bg-black min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <SocialProof />
       <ProblemSection />
       <SolutionSection />
       <FeaturesGrid />
       <HowItWorks />
       <AICoachSection />
       <AnalyticsSection />
-      <Testimonials />
       <PricingSection />
       <FAQSection />
       <CTASection />

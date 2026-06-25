@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -9,10 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold">P</span>
-              </div>
-              <span className="text-xl font-bold text-white font-outfit">PipBud</span>
+              <Image src="/logo.PNG" alt="PipBud Logo" width={80} height={80}/>
             </Link>
             <p className="text-gray-500 text-sm max-w-md">
               AI-powered trading companion on Telegram. Journal trades, get AI coaching, and improve your performance.
