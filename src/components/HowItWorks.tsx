@@ -2,9 +2,25 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle, Camera, Brain, TrendingUp, ArrowRight, Sparkles, Clock, Zap } from 'lucide-react';
-import Image from 'next/image';
 
-const steps = [
+// Define types
+interface Step {
+  step: string;
+  icon: any;
+  title: string;
+  description: string;
+  visual: 'telegram' | 'screenshot' | 'analysis' | 'analytics';
+  color: string;
+  lightColor: string;
+  iconBg: string;
+  iconColor: string;
+}
+
+interface VisualMockupProps {
+  type: 'telegram' | 'screenshot' | 'analysis' | 'analytics';
+}
+
+const steps: Step[] = [
   {
     step: '01',
     icon: MessageCircle,
@@ -52,7 +68,7 @@ const steps = [
 ];
 
 // Visual Mockup Components
-const VisualMockup = ({ type }) => {
+const VisualMockup = ({ type }: VisualMockupProps) => {
   if (type === 'telegram') {
     return (
       <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-blue-50/80 to-blue-100/30 rounded-xl overflow-hidden">
@@ -236,18 +252,7 @@ const VisualMockup = ({ type }) => {
     );
   }
 
-  return (
-    <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-gray-50/80 to-gray-100/30 rounded-xl overflow-hidden">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gray-100 flex items-center justify-center">
-            <Sparkles className="w-6 h-6 text-gray-400" />
-          </div>
-          <div className="text-sm text-gray-400">Preview</div>
-        </div>
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default function HowItWorks() {
